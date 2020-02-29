@@ -16,7 +16,12 @@ class MainActivity : Activity() {
         setContentView(R.layout.activity_main)
 
         var bottomNavigation: BottomNavigationView? = null
-        var b1 = findViewById(R.id.personal_account) as Button
+        var bottomPersonal = findViewById(R.id.navigation_lk) as Button
+        var bottomService = findViewById(R.id.navigation_service) as Button
+        var bottomTime = findViewById (R.id.navigation_timetable) as Button
+        var bottomSupport = findViewById(R.id.navigation_support) as Button
+
+
 
         fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
