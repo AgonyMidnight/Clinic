@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="jar:file:/C:/android/android-studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/contact_support/baseline_contact_support_24.xml" />
+                                      <entry key="url" value="jar:file:/C:/android/android-studio/plugins/android/lib/android.jar!/images/material/icons/materialicons/person/baseline_person_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="0fba83" />
-                            <entry key="outputName" value="ic_baseline_contact_support_24" />
+                            <entry key="color" value="eeeeee" />
+                            <entry key="outputName" value="ic_baseline_person_white" />
                             <entry key="sourceFile" value="C:\Users\Agony\Desktop\Arcadia\Clinic" />
                           </map>
                         </option>

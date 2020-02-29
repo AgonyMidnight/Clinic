@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/routes"
+    app:startDestination="@id/timetable">
+
+    <fragment
+        android:id="@+id/timetable"
+        android:name="com.example.clinic.timetable.timetable"
+        android:label="timetable_fragment"
+        tools:layout="@layout/timetable_fragment" >
+        <action
+            android:id="@+id/action_timetable_to_personal_account"
+            app:destination="@id/personal_account" />
+        <action
+            android:id="@+id/action_timetable_to_support"
+            app:destination="@id/support" />
+        <action
+            android:id="@+id/action_timetable_to_service"
+            app:destination="@id/service" />
+        <action
+            android:id="@+id/action_timetable_to_personal_account_true"
+            app:destination="@id/personal_account_true" />
+    </fragment>
+    <fragment
+        android:id="@+id/personal_account"
+        android:name="com.example.clinic.personal_account.personal_account"
+        android:label="personal_account_fragment"
+        tools:layout="@layout/personal_account_fragment" />
+    <fragment
+        android:id="@+id/support"
+        android:name="com.example.clinic.support.support"
+        android:label="support_fragment"
+        tools:layout="@layout/support_fragment" />
+    <fragment
+        android:id="@+id/service"
+        android:name="com.example.clinic.service.service"
+        android:label="service_fragment"
+        tools:layout="@layout/service_fragment" />
+    <fragment
+        android:id="@+id/personal_account_true"
+        android:name="com.example.clinic.personalaccounttrue.personal_account_true"
+        android:label="personal_account_true_fragment"
+        tools:layout="@layout/personal_account_true_fragment" />
+</navigation>

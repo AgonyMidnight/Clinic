@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Clinic</string>
+    <string name="login">Логин</string>
 </resources>

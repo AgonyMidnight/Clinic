@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_timetable"
+        android:icon="@drawable/ic_baseline_calendar"
+        android:title="Расписание"
+
+        />
+    <item
+        android:id="@+id/navigation_service"
+        android:icon="@drawable/ic_baseline_local_hospital"
+        android:title="Услуги" />
+    <item
+        android:id="@+id/navigation_support"
+        android:icon="@drawable/ic_baseline_contact_support"
+        android:title="Помощь" />
+    <item
+        android:id="@+id/navigation_lk"
+        android:icon="@drawable/ic_baseline_person_white"
+
+        android:title="Личный Кабинет" />
+</menu>
