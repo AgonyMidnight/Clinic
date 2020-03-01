@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 import java.text.DateFormat
 import java.util.*
 
-@Entity(tableName = "Patients")
+@Entity
 class Patient(
     @PrimaryKey(autoGenerate = true) var id: Int,
     var firstName: String,      // имя / отчество

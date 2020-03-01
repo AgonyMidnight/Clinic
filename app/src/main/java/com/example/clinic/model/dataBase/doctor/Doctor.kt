@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.util.*
 
-@Entity(tableName = "Doctors")
+@Entity
 class Doctor(
     @PrimaryKey(autoGenerate = true) var id: Int,
     var firstName: String,  // имя / отчество

@@ -14,18 +14,18 @@ interface DoctorDao {
     @Update
     fun updateDoc(doctor: Doctor)
 
-    @Query("select * from doctors")
+    @Query("select * from doctor")
     fun selectAllDoctor(): List<Doctor>
 
-    @Query("select * from doctors where secondName = :secondName")
+    @Query("select * from doctor where secondName = :secondName")
     fun selectSecondNameDoctor(secondName : String)                        // по фамилии
 
-    @Query("select * from doctors where firstName = :firstName")
+    @Query("select * from doctor where firstName = :firstName")
     fun selectFirstNameDoctor(firstName : String)                          // по имени / отчеству
 
-    @Query("select * from doctors where (firstName = :firstName) or (secondName = :secondName)")
+    @Query("select * from doctor where (firstName = :firstName) or (secondName = :secondName)")
     fun selectFullNameDoctor(firstName : String, secondName: String)       // по ФИО
 
-    @Query("select * from doctors where id = :id")
+    @Query("select * from doctor where id = :id")
     fun selectIdDoctor(id : Int)
 }

@@ -15,24 +15,24 @@ interface VisitDao {
     @Update
     fun updateDoc(visit: Visit)
 
-    @Query("select * from visits")
+    @Query("select * from visit")
     fun selectAllPatient(): List<Visit>
 
-    @Query("select * from visits where dateVisit = :dateVisit")
+    @Query("select * from visit where dateVisit = :dateVisit")
     fun selectDatePatient(dateVisit : Date)                             // по дате
 
-    @Query("select * from visits where complaints = :complaints")
+    @Query("select * from visit where complaints = :complaints")
     fun selectComplaintsPatient(complaints : String)                    // жалобам
 
-    @Query("select * from visits where assignment = :assignment")
+    @Query("select * from visit where assignment = :assignment")
     fun selectAssignmentsPatient(assignment : String)                   // назначениям
 
-    @Query("select * from visits where doctor_id = :idDoctor")
+    @Query("select * from visit where doctor_id = :idDoctor")
     fun selectIdDoctorPatient(idDoctor : String)                        // id врача
 
-    @Query("select * from visits where patient_id = :idPatient")
+    @Query("select * from visit where patient_id = :idPatient")
     fun selectIdPatientPatient(idPatient : String)                      // id пациента
 
-    @Query("select * from visits where id = :id")
+    @Query("select * from visit where id = :id")
     fun selectIdVisits(id : Int)
 }

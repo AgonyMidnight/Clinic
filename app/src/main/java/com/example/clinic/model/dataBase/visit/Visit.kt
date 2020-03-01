@@ -8,15 +8,13 @@ import com.example.clinic.model.dataBase.doctor.Doctor
 import com.example.clinic.model.dataBase.patient.Patient
 import java.util.*
 
-@Entity(foreignKeys = [(ForeignKey(entity = Doctor::class,  parentColumns = ["id"], childColumns = ["doctor_id"],  onDelete = ForeignKey.CASCADE)),
-                       (ForeignKey(entity = Patient::class, parentColumns = ["id"], childColumns = ["patient_id"], onDelete = ForeignKey.CASCADE))]
-, tableName = "Visits")
+@Entity
 class Visit(
     @PrimaryKey(autoGenerate = true) var id: Int,
     var dateVisit: Date,                    // дата посещения
     var complaints: String,                 // жалобы
     var assignment: String,                 // назначения
     var additionallyInfoVisit: String,      // допИнф посещения
-    @ColumnInfo(name = "doctor_id")     var idDoctor: Int,  // врач
-    @ColumnInfo(name = "patient_id")    var idPatient: Int  // пациент
+    var idDoctor: Int,  // врач
+    var idPatient: Int  // пациент
 )
