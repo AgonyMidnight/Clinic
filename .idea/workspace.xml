@@ -69,7 +69,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android-custom-viewC:/Users/Agony/Desktop/Arcadia/Clinic/app/src/main/java/com/example/clinic/MainActivityViewModel.kt_SELECTED" value="MainActivityViewModel" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NotMyProjects/WeatherForecast" />
     <property name="multi-representation-previewC:/Users/Agony/Desktop/Arcadia/Clinic/app/src/main/java/com/example/clinic/MainActivityViewModel.kt_selected" value="" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -185,6 +185,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="import ROOM" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="552" y="191" width="816" height="889" key="#Intentions" timestamp="1583097649960">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="191" width="816" height="889" key="#Intentions/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583097649960" />
     <state x="286" y="143" key="#PSD" timestamp="1582895724494">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -216,12 +220,12 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="624" y="40" key="CommitChangelistDialog2/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583074903198" />
-    <state x="776" y="244" key="FileChooserDialogImpl" timestamp="1583074973349">
+    <state x="776" y="244" key="FileChooserDialogImpl" timestamp="1583095781795">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="516" y="166" key="FileChooserDialogImpl/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1582935932182" />
     <state x="516" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1582903128341" />
-    <state x="776" y="244" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583074973349" />
+    <state x="776" y="244" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1080@0.0.1920.1080" timestamp="1583095781795" />
     <state width="745" height="210" key="GridCell.Tab.0.bottom" timestamp="1582933432165">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -269,16 +273,5 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/-1920.0.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1582327361404" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/clinic/model/dataBase/ClinicDataBase.kt</url>
-          <line>2</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
