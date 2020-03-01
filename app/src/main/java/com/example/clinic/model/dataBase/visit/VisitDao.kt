@@ -18,21 +18,21 @@ interface VisitDao {
     @Query("select * from visit")
     fun selectAllPatient(): List<Visit>
 
-    @Query("select * from visit where dateVisit = :dateVisit")
-    fun selectDatePatient(dateVisit : Date)                             // по дате
+    @Query("select * from visit where visit_date = :visit_date")
+    fun selectDatePatient(visit_date: Date): List<Visit>                             // по дате
 
-    @Query("select * from visit where complaints = :complaints")
-    fun selectComplaintsPatient(complaints : String)                    // жалобам
+    @Query("select * from visit where visit_complaints = :visit_complaints")
+    fun selectComplaintsPatient(visit_complaints: String): List<Visit>                    // жалобам
 
-    @Query("select * from visit where assignment = :assignment")
-    fun selectAssignmentsPatient(assignment : String)                   // назначениям
+    @Query("select * from visit where visit_assignment = :visit_assignment")
+    fun selectAssignmentsPatient(visit_assignment: String): List<Visit>                   // назначениям
 
-    @Query("select * from visit where doctor_id = :idDoctor")
-    fun selectIdDoctorPatient(idDoctor : String)                        // id врача
+    @Query("select * from visit where doctor_id = :doctor_id")
+    fun selectIdDoctorPatient(doctor_id: String): List<Visit>                        // id врача
 
-    @Query("select * from visit where patient_id = :idPatient")
-    fun selectIdPatientPatient(idPatient : String)                      // id пациента
+    @Query("select * from visit where patient_id = :patient_id")
+    fun selectIdPatientPatient(patient_id: String): List<Visit>                      // id пациента
 
     @Query("select * from visit where id = :id")
-    fun selectIdVisits(id : Int)
+    fun selectIdVisits(id: Int): Visit
 }

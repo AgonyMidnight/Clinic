@@ -8,13 +8,13 @@ import java.util.*
 @Entity
 class Patient(
     @PrimaryKey(autoGenerate = true) var id: Int,
-    var firstName: String,      // имя / отчество
-    var secondName: String,     // фамилия
-    var birthday: Date,   // ДР
-    var addressNumber: String,  // адресНомерДома
-    var addressStreet: String,  // адресУлица
-    var addressCity: String,    // адресГород
-    var phone: String,          // телефон
-    var numberMedCard: String,  // номер медКарты
-    var medPolice: String       // медПолис
+    var patient_firstName: String,      // имя / отчество
+    var patient_secondName: String,     // фамилия
+    var patient_birthday: Date,         // ДР
+    var patient_addressNumber: String,  // адресНомерДома
+    var patient_addressStreet: String,  // адресУлица
+    var patient_addressCity: String,    // адресГород
+    var patient_phone: String,          // телефон
+    var patient_numberMedCard: String,  // номер медКарты
+    var patient_medPolice: String       // медПолис
 )

@@ -11,10 +11,10 @@ import java.util.*
 @Entity
 class Visit(
     @PrimaryKey(autoGenerate = true) var id: Int,
-    var dateVisit: Date,                    // дата посещения
-    var complaints: String,                 // жалобы
-    var assignment: String,                 // назначения
-    var additionallyInfoVisit: String,      // допИнф посещения
-    var idDoctor: Int,  // врач
-    var idPatient: Int  // пациент
+    var visit_date: Date,                    // дата посещения
+    var visit_complaints: String,                 // жалобы
+    var visit_assignment: String,                 // назначения
+    var visit_comments: String,      // допИнф посещения
+    var doctor_id: Int,
+    var patient_id: Int
 )
