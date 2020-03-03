@@ -1,10 +1,12 @@
 package com.example.clinic.model.dataBase.visit
 
 import androidx.room.*
+import com.example.clinic.model.dataBase.patient.DateConverter
 import com.example.clinic.model.dataBase.patient.Patient
 import java.util.*
 
 @Dao
+@TypeConverters(DateConverter::class)
 interface VisitDao {
     @Insert
     fun insertDoc(visit: Visit)

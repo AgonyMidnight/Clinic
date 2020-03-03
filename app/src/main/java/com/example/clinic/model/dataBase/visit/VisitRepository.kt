@@ -4,10 +4,8 @@ import android.content.Context
 import com.example.clinic.model.dataBase.ClinicDataBase
 import java.util.*
 
-class PatientRepository (
-    context: Context,
-    clinicDataBase: ClinicDataBase
-) {
+class VisitRepository (context: Context) {
+    private val clinicDataBase = ClinicDataBase(context)
     private val visitDao = clinicDataBase.visitDao()
 
     fun getVisitID(doctor_id: Int): Visit {

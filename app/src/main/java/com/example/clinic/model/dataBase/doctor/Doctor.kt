@@ -2,6 +2,7 @@ package com.example.clinic.model.dataBase.doctor
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import androidx.room.TypeConverter
 import java.util.*
 
 @Entity

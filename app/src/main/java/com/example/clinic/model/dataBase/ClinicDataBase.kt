@@ -22,6 +22,19 @@ abstract class ClinicDataBase : RoomDatabase(){
     abstract fun visitDao(): VisitDao
 
     companion object{
+        @Volatile private var instance: ClinicDataBase? = null
+        private val Lock = Any()
+
+        operator fun invoke(context: Context) = instance ?: synchronized(Lock){
+            instance ?: buildDataBase(context).also { instance = it }
+        }
+
+        private fun buildDataBase(context: Context) =
+            Room.databaseBuilder(context.applicationContext,
+                ClinicDataBase::class.java, "clinic_db")
+                .build()
+
+        /*
         fun getDatabase(context: Context): ClinicDataBase? {
             var instance: ClinicDataBase? = null
             if (instance == null) {
@@ -30,6 +43,6 @@ abstract class ClinicDataBase : RoomDatabase(){
                     .build()
             }
             return instance
-        }
+        }*/
     }
 }

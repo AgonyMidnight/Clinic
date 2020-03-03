@@ -5,6 +5,7 @@ import androidx.room.*
 import com.example.clinic.model.dataBase.patient.Patient
 
 @Dao
+@TypeConverters(DateConverter::class)
 interface PatientDao {
     @Insert
     fun insertDoc(patient: Patient)

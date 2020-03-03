@@ -4,10 +4,8 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import com.example.clinic.model.dataBase.ClinicDataBase
 
-class DoctorRepository (
-    context: Context,
-    clinicDataBase: ClinicDataBase
-) {
+class DoctorRepository (context: Context) {
+    private val clinicDataBase = ClinicDataBase(context)
     private val doctorDao = clinicDataBase.doctorDao()
 
     fun getDoctorID(doctor_id: Int): Doctor{
