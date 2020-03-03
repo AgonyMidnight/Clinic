@@ -10,17 +10,17 @@ class VisitRepository (context: Context) {
     private val clinicDataBase = ClinicDataBase(context)
     private val visitDao = clinicDataBase.visitDao()
 
-    fun test(doctor_id: Int) = GlobalScope.async {
+    fun getVisitID(doctor_id: Int) = GlobalScope.async {
         return@async visitDao.selectIdVisits(doctor_id)
     }
-    
-    fun getVisitID(doctor_id: Int): Visit {
+
+    /*fun getVisitID(doctor_id: Int): Visit {
         var visit: Visit
         GlobalScope.async {
             visit = visitDao.selectIdVisits(doctor_id)
         }
         return visit
-    }
+    }*/
 
     fun getVisitsAll(): List<Visit>{
         return visitDao.selectAllPatient()
