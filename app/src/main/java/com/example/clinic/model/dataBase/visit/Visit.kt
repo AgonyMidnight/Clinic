@@ -21,10 +21,7 @@ class DateConverter {
     fun toDate(timestamp: Long?) = timestamp?.let { Date(it) }
 
     /*fun toDateFormat(oldDate: Date): Date{
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
+        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")
         var formattedDate = oldDate.format(formatter)
     }*/
-
-    @TypeConverter  // Указать, что метод является конвертером
-    fun toTimestamp(date: Date?) = date?.time
 }

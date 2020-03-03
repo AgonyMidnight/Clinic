@@ -32,7 +32,4 @@ class DateConverter {
         val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
         var formattedDate = oldDate.format(formatter)
     }*/
-
-    @TypeConverter  // Указать, что метод является конвертером
-    fun toTimestamp(date: Date?) = date?.time
 }
