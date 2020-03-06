@@ -13,5 +13,5 @@ class Doctor(
         var doctor_TIN: String,             // ИНН
         var doctor_phone: String,           // телефон
         var doctor_birthday: Date,          // день рождения
-        var specialization_id: Int          // специализации
+        var specialization_id: Int          // специализация
 )

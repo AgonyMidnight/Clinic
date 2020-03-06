@@ -18,8 +18,8 @@ class Patient(
     var patient_birthday: Date,         // ДР
     var patient_addressNumber: String,  // адресНомерДома
     var patient_addressStreet: String,  // адресУлица
-    var patient_addressCity: String,    // адресГород
-    var patient_phone: String?,          // телефон
+    var patient_addressCity: Int,       // адресГород
+    var patient_phone: String?,         // телефон
     var patient_numberMedCard: String,  // номер медКарты
     var patient_medPolice: String       // медПолис
 )
