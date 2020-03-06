@@ -4,10 +4,12 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import com.example.clinic.model.dataBase.city.CityDao
 import com.example.clinic.model.dataBase.doctor.Doctor
 import com.example.clinic.model.dataBase.doctor.DoctorDao
 import com.example.clinic.model.dataBase.patient.Patient
 import com.example.clinic.model.dataBase.patient.PatientDao
+import com.example.clinic.model.dataBase.specialization.SpecializationDao
 import com.example.clinic.model.dataBase.visit.Visit
 import com.example.clinic.model.dataBase.visit.VisitDao
 
@@ -20,6 +22,8 @@ abstract class ClinicDataBase : RoomDatabase(){
     abstract fun patientDao(): PatientDao
     abstract fun doctorDao(): DoctorDao
     abstract fun visitDao(): VisitDao
+    abstract fun specializationDao(): SpecializationDao
+    abstract fun cityDao(): CityDao
 
     companion object{
         @Volatile private var instance: ClinicDataBase? = null
