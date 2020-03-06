@@ -3,7 +3,6 @@ package com.example.clinic.model.dataBase.specialization
 import android.content.Context
 import androidx.lifecycle.LiveData
 import com.example.clinic.model.dataBase.ClinicDataBase
-import com.example.clinic.model.dataBase.patient.Patient
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async

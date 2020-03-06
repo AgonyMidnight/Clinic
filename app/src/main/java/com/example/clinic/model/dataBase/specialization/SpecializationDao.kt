@@ -6,7 +6,6 @@ import com.example.clinic.model.dataBase.patient.Patient
 
 @Dao
 interface SpecializationDao {
-
     @Insert
     fun insertSpecialization(specialization: Specialization)
 

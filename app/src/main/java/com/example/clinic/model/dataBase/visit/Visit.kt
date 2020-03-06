@@ -14,7 +14,6 @@ class Visit(
         var visit_comments: String?,        // допИнф посещения
         var doctor_id: Int,
         var patient_id: Int
-
 )
 
 class DateConverter {
