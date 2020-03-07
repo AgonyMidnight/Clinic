@@ -1,13 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+
+   >
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.clinic.service.ServiceViewModel" />
+    </data>
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".service.service">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#EEEEEE"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:id="@+id/buttonAnalisis"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Анализы"
+            android:background="#ff4949"
+            android:textColor="#EEEEEE"
+            >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello2" />
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="Платный прием"
+            android:background="#ff4949"
+            android:textColor="#EEEEEE"
+            >
 
-</FrameLayout>
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="УЗИ"
+            android:background="#ff4949"
+            android:textColor="#EEEEEE"
+            >
+
+        </Button>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp">
+        <Button
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:text="МРТ"
+            android:background="#ff4949"
+            android:textColor="#EEEEEE"
+            >
+
+        </Button>
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

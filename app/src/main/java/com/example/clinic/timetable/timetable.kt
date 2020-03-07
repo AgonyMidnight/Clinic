@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.example.clinic.R
-import com.example.clinic.personal_account.personal_account
+//import com.example.clinic.personal_account.personal_account
 import kotlinx.android.synthetic.main.activity_main.*
 
 class timetable : Fragment() {
@@ -35,9 +35,7 @@ class timetable : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-        bottom_navigation.setOnClickListener{
 
-        }
         //viewModel = ViewModelProviders.of(this).get(TimetableViewModel::class.java)
         // TODO: Use the ViewModel
     }

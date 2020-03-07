@@ -2,45 +2,58 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/routes"
-    app:startDestination="@id/timetable">
+    android:id="@+id/navigation_routes"
+    app:startDestination="@id/navigation_home">
 
     <fragment
-        android:id="@+id/timetable"
+        android:id="@+id/navigation_home"
         android:name="com.example.clinic.timetable.timetable"
-        android:label="timetable_fragment"
-        tools:layout="@layout/timetable_fragment" >
-        <action
-            android:id="@+id/action_timetable_to_personal_account"
-            app:destination="@id/personal_account" />
-        <action
-            android:id="@+id/action_timetable_to_support"
-            app:destination="@id/support" />
-        <action
-            android:id="@+id/action_timetable_to_service"
-            app:destination="@id/service" />
-        <action
-            android:id="@+id/action_timetable_to_personal_account_true"
-            app:destination="@id/personal_account_true" />
-    </fragment>
+        android:label="Расписание"
+
+        tools:layout="@layout/timetable_fragment"/>
     <fragment
-        android:id="@+id/personal_account"
-        android:name="com.example.clinic.personal_account.personal_account"
-        android:label="personal_account_fragment"
-        tools:layout="@layout/personal_account_fragment" />
-    <fragment
-        android:id="@+id/support"
-        android:name="com.example.clinic.support.support"
-        android:label="support_fragment"
-        tools:layout="@layout/support_fragment" />
-    <fragment
-        android:id="@+id/service"
+        android:id="@+id/navigation_service"
         android:name="com.example.clinic.service.service"
-        android:label="service_fragment"
-        tools:layout="@layout/service_fragment" />
+        android:label="Service"
+        tools:layout="@layout/service_fragment">
+        <action
+            android:id="@+id/action_navigation_service_to_navigation_analisis"
+            app:destination="@id/navigation_analisis" />
+    </fragment>
+
     <fragment
-        android:id="@+id/personal_account_true"
+        android:id="@+id/navigation_support"
+        android:name="com.example.clinic.support.support"
+        android:label="Support"
+        tools:layout="@layout/support_fragment"/>
+
+    <fragment
+        android:id="@+id/navigation_personal_account"
+        android:name="com.example.clinic.personal_account.personal_account"
+        android:label="Account"
+        tools:layout="@layout/personal_account_fragment"/>
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="com.example.clinic.support.support"
+        android:label="title_notifications"
+        tools:layout="@layout/fragment_notifications" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="com.example.clinic.dashboard.DashboardFragment"
+        android:label="title_dashboard"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/navigation_personal_true_account"
         android:name="com.example.clinic.personalaccounttrue.personal_account_true"
-        android:label="personal_account_true_fragment"
-        tools:layout="@layout/personal_account_true_fragment" />
+        android:label="Вход"
+        tools:layout="@layout/personal_account_true_fragment"/>
+    <fragment
+        android:id="@+id/navigation_analisis"
+        android:name="com.example.clinic.analisis.Analisis"
+        android:label="Анализы"
+        tools:layout="@layout/analisis_fragment"/>
+
+
 </navigation>

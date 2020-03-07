@@ -26,10 +26,7 @@
             android:screenOrientation="portrait">
         </activity>
 
-        <activity
-            android:name=".LK.LKActivity"
-            android:screenOrientation="portrait">
-        </activity>
+
 
     </application>
 
