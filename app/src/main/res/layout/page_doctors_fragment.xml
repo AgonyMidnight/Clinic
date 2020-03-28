@@ -14,6 +14,6 @@
         android:layout_height="match_parent"
         android:textSize="40sp"
         android:textColor="#000000"
-        android:text="Hi"/>
+        android:text="@{viewModel.nameDoctor}"/>
 
 </layout>

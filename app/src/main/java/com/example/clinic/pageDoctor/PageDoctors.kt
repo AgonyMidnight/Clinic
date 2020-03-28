@@ -33,8 +33,10 @@ class PageDoctors : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-       dataBinding.justtest.text = arguments?.getString("id")
+        val Last = arguments?.getString("id")
+        if (Last != null) {
+            viewModel!!.NameDoctor =  Last
+        }
         super.onViewCreated(view, savedInstanceState)
         dataBinding.viewModel = viewModel
         dataBinding.lifecycleOwner = viewLifecycleOwner
