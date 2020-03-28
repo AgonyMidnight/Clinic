@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-  >
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
     <data>
+
+        <variable
+            name="fragment"
+            type="com.example.clinic.timetable.TimeTableFragment" />
 
         <variable
             name="viewModel"
@@ -16,35 +20,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <LinearLayout
-            android:layout_width="match_parent"
             android:id="@+id/finddoctor"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:weightSum="150"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:weightSum="150">
 
             <EditText
+                android:id="@+id/nameDoc"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
-                android:paddingRight="20dp"
-                android:id="@+id/nameDoc"
                 android:layout_marginLeft="10dp"
-                android:hint="Введите фамилию врача"
-                android:textColorHint="#dddddd"
                 android:layout_marginRight="10dp"
-
-                >
+                android:hint="Введите фамилию врача"
+                android:paddingRight="20dp"
+                android:textColorHint="#dddddd">
 
             </EditText>
 
             <Button
-                android:layout_marginLeft="10dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                
-                android:backgroundTint="#c10000"
+                android:layout_marginLeft="10dp"
+
                 android:background="@drawable/ic_baseline_search"
-                ></Button>
+                android:backgroundTint="#c10000"></Button>
 
         </LinearLayout>
 
@@ -52,22 +54,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:textColor="#c10000"
-            android:text="Терапевт"
-            android:textSize="30sp"
-            android:layout_marginBottom="20dp">
 
-        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginBottom="20dp"
+                android:onClick="@{ _ -> fragment.displayTherapist() }"
+                android:text="Терапевт"
+                android:textColor="#c10000"
+                android:textSize="30sp">
+
+            </TextView>
+
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinerofterapist"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
 
                 >
@@ -76,113 +81,117 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="#c10000"
                 android:text="Хирург"
-                android:textSize="30sp">
-            </TextView>
+                android:textColor="#c10000"
+                android:textSize="30sp"></TextView>
+
             <Spinner
                 android:id="@+id/spinerofsurgeon"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:spinnerMode="dialog"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
+                android:spinnerMode="dialog"
 
                 >
 
             </Spinner>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="#c10000"
                 android:text="Невролог"
-                android:textSize="30sp">
-            </TextView>
+                android:textColor="#c10000"
+                android:textSize="30sp"></TextView>
+
             <Spinner
                 android:id="@+id/spinerofnevrolgist"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
-                android:spinnerMode="dialog"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
+                android:spinnerMode="dialog"
 
                 >
 
             </Spinner>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/texttra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="#c10000"
                 android:text="Травматолог"
-                android:textSize="30sp">
-            </TextView>
+                android:textColor="#c10000"
+                android:textSize="30sp"></TextView>
+
             <Spinner
                 android:id="@+id/spinneroftrautomologist"
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
-                android:spinnerMode="dialog"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
+                android:spinnerMode="dialog"
 
                 >
 
             </Spinner>
         </LinearLayout>
+
         <LinearLayout
-            android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:textColor="#c10000"
                 android:text="Офтальмолог"
-                android:textSize="30sp">
-            </TextView>
+                android:textColor="#c10000"
+                android:textSize="30sp"></TextView>
+
             <Spinner
                 android:layout_width="match_parent"
-                android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
-                android:spinnerMode="dialog"
+                android:layout_marginRight="15dp"
                 android:layout_marginBottom="5dp"
-                >
+                android:spinnerMode="dialog">
 
             </Spinner>
         </LinearLayout>
 
 
-
     </LinearLayout>
-
 
 
 </layout>

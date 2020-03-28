@@ -7,10 +7,10 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.example.clinic.timetable.timetable"
+        android:name="com.example.clinic.timetable.TimeTableFragment"
         android:label="Расписание"
 
-        tools:layout="@layout/timetable_fragment"/>
+        tools:layout="@layout/timetable_fragment" />
     <fragment
         android:id="@+id/navigation_service"
         android:name="com.example.clinic.service.service"
@@ -25,13 +25,13 @@
         android:id="@+id/navigation_support"
         android:name="com.example.clinic.support.support"
         android:label="Support"
-        tools:layout="@layout/support_fragment"/>
+        tools:layout="@layout/support_fragment" />
 
     <fragment
         android:id="@+id/navigation_personal_account"
         android:name="com.example.clinic.personal_account.personal_account"
         android:label="Account"
-        tools:layout="@layout/personal_account_fragment"/>
+        tools:layout="@layout/personal_account_fragment" />
 
     <fragment
         android:id="@+id/navigation_notifications"
@@ -48,17 +48,25 @@
         android:id="@+id/navigation_personal_true_account"
         android:name="com.example.clinic.personalaccounttrue.personal_account_true"
         android:label="Вход"
-        tools:layout="@layout/personal_account_true_fragment"/>
+        tools:layout="@layout/personal_account_true_fragment" />
     <fragment
         android:id="@+id/navigation_analisis"
         android:name="com.example.clinic.analisis.Analisis"
         android:label="Анализы"
-        tools:layout="@layout/analisis_fragment"/>
+        tools:layout="@layout/analisis_fragment" />
     <fragment
         android:id="@+id/pageDoctors"
         android:name="com.example.clinic.pageDoctor.PageDoctors"
         android:label="page_doctors_fragment"
-        tools:layout="@layout/page_doctors_fragment" />
+        tools:layout="@layout/page_doctors_fragment">
+        <argument
+            android:name="doctorId"
+            app:argType="integer" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_global_pageDoctors"
+        app:destination="@id/pageDoctors" />
 
 
 </navigation>
