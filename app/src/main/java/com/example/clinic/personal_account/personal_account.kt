@@ -25,10 +25,6 @@ class personal_account : Fragment() {
 
         }
     }
-//    companion object {
-//        fun newInstance() =
-//            personal_account()
-//    }
 
 
     override fun onCreateView(
@@ -48,9 +44,6 @@ class personal_account : Fragment() {
         if (viewModel.Autorisation == true) {
             view.findNavController().navigate(R.id.navigation_personal_true_account)
         }
-
-
-
         dataBinding.viewModel = viewModel
         dataBinding.lifecycleOwner = viewLifecycleOwner
     }

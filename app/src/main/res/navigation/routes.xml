@@ -54,6 +54,11 @@
         android:name="com.example.clinic.analisis.Analisis"
         android:label="Анализы"
         tools:layout="@layout/analisis_fragment"/>
+    <fragment
+        android:id="@+id/pageDoctors"
+        android:name="com.example.clinic.pageDoctor.PageDoctors"
+        android:label="page_doctors_fragment"
+        tools:layout="@layout/page_doctors_fragment" />
 
 
 </navigation>

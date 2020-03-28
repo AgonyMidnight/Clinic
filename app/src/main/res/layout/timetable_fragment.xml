@@ -4,9 +4,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
   >
     <data>
+
         <variable
             name="viewModel"
             type="com.example.clinic.timetable.TimetableViewModel" />
+
     </data>
 
 
@@ -25,7 +27,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
                 android:paddingRight="20dp"
-
+                android:id="@+id/nameDoc"
                 android:layout_marginLeft="10dp"
                 android:hint="Введите фамилию врача"
                 android:textColorHint="#dddddd"
@@ -39,6 +41,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                
                 android:backgroundTint="#c10000"
                 android:background="@drawable/ic_baseline_search"
                 ></Button>
@@ -59,7 +62,7 @@
             android:layout_marginBottom="20dp">
 
         </TextView>
-            <Spinner
+            <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinerofterapist"
                 android:layout_width="match_parent"
                 android:layout_marginRight="15dp"
@@ -69,7 +72,7 @@
 
                 >
 
-            </Spinner>
+            </androidx.appcompat.widget.AppCompatSpinner>
         </LinearLayout>
 
         <LinearLayout
@@ -86,10 +89,12 @@
                 android:textSize="30sp">
             </TextView>
             <Spinner
+                android:id="@+id/spinerofsurgeon"
                 android:layout_width="match_parent"
                 android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"
                 android:layout_marginBottom="5dp"
 
                 >
@@ -110,9 +115,11 @@
                 android:textSize="30sp">
             </TextView>
             <Spinner
+                android:id="@+id/spinerofnevrolgist"
                 android:layout_width="match_parent"
                 android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
+                android:spinnerMode="dialog"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
 
@@ -126,6 +133,7 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <TextView
+                android:id="@+id/texttra"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -134,8 +142,10 @@
                 android:textSize="30sp">
             </TextView>
             <Spinner
+                android:id="@+id/spinneroftrautomologist"
                 android:layout_width="match_parent"
                 android:layout_marginRight="15dp"
+                android:spinnerMode="dialog"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
@@ -162,8 +172,8 @@
                 android:layout_marginRight="15dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
+                android:spinnerMode="dialog"
                 android:layout_marginBottom="5dp"
-
                 >
 
             </Spinner>
