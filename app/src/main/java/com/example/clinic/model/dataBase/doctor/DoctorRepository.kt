@@ -20,12 +20,12 @@ class DoctorRepository (context: Context) {
         DoctorNetworkService.Companion
             .getJSONDoctor()
             ?.getDoctorBySpec()
-            /*?.enqueue(Callback<Doctor>(){
+            ?.enqueue(Callback<Doctor
                 @Override
                 fun onResponse(call: Call<Doctor>,  response: Response<Doctor>) {
 
                 }
-            });*/
+            });
     }
 
     suspend fun getDoctorsAll(): List<Doctor> = doctorDao.selectAllDoctor()
