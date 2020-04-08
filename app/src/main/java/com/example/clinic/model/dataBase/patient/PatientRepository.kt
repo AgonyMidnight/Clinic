@@ -11,35 +11,19 @@ class PatientRepository (context: Context) {
     private val clinicDataBase = ClinicDataBase(context)
     private val patientDao = clinicDataBase.patientDao()
 
-    fun getPatientID(doctor_id: Int): Deferred<Patient> = GlobalScope.async {
-        return@async patientDao.selectIdPatient(doctor_id)
-    }
+    suspend fun getPatientID(doctor_id: Int): Patient = patientDao.selectIdPatient(doctor_id)
 
-    fun getPatientsAll(): Deferred<LiveData<List<Patient>>> = GlobalScope.async {
-        return@async patientDao.selectAllPatient()
-    }
+    suspend fun getPatientsAll(): List<Patient> = patientDao.selectAllPatient()
 
-    fun getPatientsSecondName(doctor_secondName: String): Deferred<LiveData<List<Patient>>> = GlobalScope.async{
-        return@async patientDao.selectSecondNamePatient(doctor_secondName)
-    }
+    suspend fun getPatientsSecondName(doctor_secondName: String): List<Patient> = patientDao.selectSecondNamePatient(doctor_secondName)
 
-    fun getPatientsFirstName(doctor_firstName: String): Deferred<LiveData<List<Patient>>> = GlobalScope.async{
-        return@async patientDao.selectFirstNamePatient(doctor_firstName)
-    }
+    suspend fun getPatientsFirstName(doctor_firstName: String): List<Patient> = patientDao.selectFirstNamePatient(doctor_firstName)
 
-    fun getPatientsFullName(doctor_firstName: String, doctor_secondName: String): Deferred<LiveData<List<Patient>>> = GlobalScope.async{
-        return@async patientDao.selectFullNamePatient(doctor_firstName, doctor_secondName)
-    }
+    suspend fun getPatientsFullName(doctor_firstName: String, doctor_secondName: String): List<Patient> = patientDao.selectFullNamePatient(doctor_firstName, doctor_secondName)
 
-    fun insertPatient(doctor: Patient) = GlobalScope.async{
-        patientDao.insertDoc(doctor)
-    }
+    suspend fun insertPatient(doctor: Patient) = patientDao.insertDoc(doctor)
 
-    fun deletePatient(doctor: Patient) = GlobalScope.async{
-        patientDao.deleteDoc(doctor)
-    }
+    suspend fun deletePatient(doctor: Patient) = patientDao.deleteDoc(doctor)
 
-    fun updatePatient(doctor: Patient) = GlobalScope.async{
-        patientDao.updateDoc(doctor)
-    }
+    suspend fun updatePatient(doctor: Patient) = patientDao.updateDoc(doctor)
 }

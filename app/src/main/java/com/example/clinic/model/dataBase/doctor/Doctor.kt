@@ -7,6 +7,8 @@ import java.util.*
 @Entity
 class Doctor(
         @PrimaryKey(autoGenerate = true) var id: Int,
+        var doctor_login: String,
+        var doctor_pass: String,
         var doctor_firstName: String,       // имя / отчество
         var doctor_secondName: String,      // фамилия
         var doctor_passport: String,        // серия номер

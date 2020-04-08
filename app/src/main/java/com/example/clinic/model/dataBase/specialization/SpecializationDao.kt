@@ -16,11 +16,11 @@ interface SpecializationDao {
     fun updateSpecialization(specialization: Specialization)
 
     @Query("select * from specialization")
-    fun selectAllSpecialization(): LiveData<List<Specialization>>
+    fun selectAllSpecialization(): List<Specialization>
 
     @Query("select * from specialization where id = :id")
     fun selectIdSpecialization(id: Int): Specialization
 
     @Query("select * from specialization where specialization_Name = :specialization_Name")
-    fun selectSpecializationName(specialization_Name: String): LiveData<List<Specialization>>
+    fun selectSpecializationName(specialization_Name: String): List<Specialization>
 }

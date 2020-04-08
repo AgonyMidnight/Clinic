@@ -14,7 +14,8 @@ class Patient(
     @PrimaryKey(autoGenerate = true) var id: Int,
     var patient_firstName: String,      // имя / отчество
     var patient_secondName: String,     // фамилия
-    @TypeConverters(DateConverter::class)
+    var patient_login: String,
+    var patient_pass: String,
     var patient_birthday: Date,         // ДР
     var patient_addressNumber: String,  // адресНомерДома
     var patient_addressStreet: String,  // адресУлица
@@ -23,13 +24,3 @@ class Patient(
     var patient_numberMedCard: String,  // номер медКарты
     var patient_medPolice: String       // медПолис
 )
-
-class DateConverter {
-    @TypeConverter  // Указать, что метод является конвертером
-    fun toDate(timestamp: Long?) = timestamp?.let { Date(it) }
-
-    /*fun toDateFormat(oldDate: Date): Date{
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy")
-        var formattedDate = oldDate.format(formatter)
-    }*/
-}

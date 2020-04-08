@@ -13,15 +13,6 @@ class Visit(
         var visit_assignment: String?,      // назначения
         var visit_comments: String?,        // допИнф посещения
         var doctor_id: Int,
-        var patient_id: Int
+        var patient_id: Int,
+        var visit_spend: Boolean
 )
-
-class DateConverter {
-    @TypeConverter  // Указать, что метод является конвертером
-    fun toDate(timestamp: Long?) = timestamp?.let { Date(it) }
-
-    /*fun toDateFormat(oldDate: Date): Date{
-        val formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")
-        var formattedDate = oldDate.format(formatter)
-    }*/
-}

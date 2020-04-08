@@ -11,29 +11,15 @@ class SpecializationRepository (context: Context){
     private val clinicDataBase = ClinicDataBase(context)
     private val specializationDao = clinicDataBase.specializationDao()
 
-    fun getSpecializationID(specialization_id: Int): Deferred<Specialization> = GlobalScope.async {
-        return@async specializationDao.selectIdSpecialization(specialization_id)
-    }
+    suspend fun getSpecializationID(specialization_id: Int): Specialization = specializationDao.selectIdSpecialization(specialization_id)
 
-    fun getSpecialization(specialization_name: String): Deferred<LiveData<List<Specialization>>> = GlobalScope.async {
-        return@async specializationDao.selectSpecializationName(specialization_name)
-    }
+    suspend fun getSpecialization(specialization_name: String): List<Specialization> = specializationDao.selectSpecializationName(specialization_name)
 
-    fun getAllSpecialization(): Deferred<LiveData<List<Specialization>>> = GlobalScope.async {
-        return@async specializationDao.selectAllSpecialization()
-    }
+    suspend fun getAllSpecialization(): List<Specialization> = specializationDao.selectAllSpecialization()
 
-    fun insertSpecialization(specialization: Specialization) = GlobalScope.async{
-        specializationDao.insertSpecialization(specialization)
-    }
+    suspend fun insertSpecialization(specialization: Specialization) = specializationDao.insertSpecialization(specialization)
 
-    fun deleteSpecialization(specialization: Specialization) = GlobalScope.async{
-        specializationDao.deleteSpecialization(specialization)
-    }
+    suspend fun deleteSpecialization(specialization: Specialization) = specializationDao.deleteSpecialization(specialization)
 
-    fun updateSpecialization(specialization: Specialization) = GlobalScope.async{
-        specializationDao.updateSpecialization(specialization)
-    }
-
-
+    suspend fun updateSpecialization(specialization: Specialization) = specializationDao.updateSpecialization(specialization)
 }

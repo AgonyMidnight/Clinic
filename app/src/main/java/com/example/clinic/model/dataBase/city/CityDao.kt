@@ -17,11 +17,11 @@ interface CityDao {
     fun updateCity(city: City)
 
     @Query("select * from city")
-    fun selectAllCity(): LiveData<List<City>>
+    fun selectAllCity(): List<City>
 
     @Query("select * from city where id = :id")
     fun selectIdCity(id: Int): City
 
     @Query("select * from city where city_Name = :city_Name")
-    fun selectCityName(city_Name: String): LiveData<List<City>>
+    fun selectCityName(city_Name: String): List<City>
 }
