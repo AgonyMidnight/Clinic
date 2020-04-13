@@ -37,16 +37,5 @@ import com.example.clinic.model.dataBase.visit.VisitDao
             Room.databaseBuilder(context.applicationContext,
                 ClinicDataBase::class.java, "clinic_db")
                 .build()
-
-        /*
-        fun getDatabase(context: Context): ClinicDataBase? {
-            var instance: ClinicDataBase? = null
-            if (instance == null) {
-                instance = Room.databaseBuilder<ClinicDataBase>(context.applicationContext,
-                    ClinicDataBase::class.java, "clinic_db")
-                    .build()
-            }
-            return instance
-        }*/
     }
 }

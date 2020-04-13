@@ -1,8 +1,6 @@
 package com.example.clinic.model.dataBase.doctor
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.clinic.model.dataBase.doctor.Doctor
 
 @Dao
 interface DoctorDao {

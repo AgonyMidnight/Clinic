@@ -1,29 +1,89 @@
 package com.example.clinic.model.dataBase.patient
 
 import android.content.Context
-import androidx.lifecycle.LiveData
 import com.example.clinic.model.dataBase.ClinicDataBase
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
+import java.util.*
 
-class PatientRepository (context: Context) {
+class PatientRepository(context: Context) {
     private val clinicDataBase = ClinicDataBase(context)
     private val patientDao = clinicDataBase.patientDao()
+    private var errorFlagPatientApi: Boolean = false
 
-    suspend fun getPatientID(doctor_id: Int): Patient = patientDao.selectIdPatient(doctor_id)
+    suspend fun getPatientID(id: Int) {
+        try {
+            val patient = PatientNetworkService.patientApi().getPatientInfo(id)
+        } catch (e: Throwable) {
+            errorFlagPatientApi = true
+        }
+    }
 
-    suspend fun getPatientsAll(): List<Patient> = patientDao.selectAllPatient()
+    suspend fun getPatientID(patientLogin: String, patientPass: String) {
+        try {
+            val patient = PatientNetworkService.patientApi().getIdPatient(patientLogin, patientPass)
+        } catch (e: Throwable) {
+            errorFlagPatientApi = true
+        }
+    }
 
-    suspend fun getPatientsSecondName(doctor_secondName: String): List<Patient> = patientDao.selectSecondNamePatient(doctor_secondName)
+    suspend fun insertPatient(
+        patient_firstName: String,
+        patient_secondName: String,
+        patient_addressNumber: String,
+        patient_addressStreet: String,
+        patient_phone: String,
+        patient_birthday: Date,
+        patient_login: String,
+        patient_password: String,
+        patient_numberMedCard: String,
+        patient_medPolice: String
+    ) {
+        try {
+            PatientNetworkService.patientApi().setNewPatient(
+                patient_firstName,
+                patient_secondName,
+                patient_addressNumber,
+                patient_addressStreet,
+                patient_phone,
+                patient_birthday,
+                patient_login,
+                patient_password,
+                patient_numberMedCard,
+                patient_medPolice
+            )
+        } catch (e: Throwable) {
+            errorFlagPatientApi = true
+        }
+    }
 
-    suspend fun getPatientsFirstName(doctor_firstName: String): List<Patient> = patientDao.selectFirstNamePatient(doctor_firstName)
-
-    suspend fun getPatientsFullName(doctor_firstName: String, doctor_secondName: String): List<Patient> = patientDao.selectFullNamePatient(doctor_firstName, doctor_secondName)
-
-    suspend fun insertPatient(doctor: Patient) = patientDao.insertDoc(doctor)
-
-    suspend fun deletePatient(doctor: Patient) = patientDao.deleteDoc(doctor)
-
-    suspend fun updatePatient(doctor: Patient) = patientDao.updateDoc(doctor)
+    suspend fun updatePatient(
+        id: Int,
+        patient_firstName: String,
+        patient_secondName: String,
+        patient_addressNumber: String,
+        patient_addressStreet: String,
+        patient_phone: String,
+        patient_birthday: Date,
+        patient_login: String,
+        patient_password: String,
+        patient_numberMedCard: String,
+        patient_medPolice: String
+    ) {
+        try {
+            PatientNetworkService.patientApi().updatePatient(
+                id,
+                patient_firstName,
+                patient_secondName,
+                patient_addressNumber,
+                patient_addressStreet,
+                patient_phone,
+                patient_birthday,
+                patient_login,
+                patient_password,
+                patient_numberMedCard,
+                patient_medPolice
+            )
+        } catch (e: Throwable) {
+            errorFlagPatientApi = true
+        }
+    }
 }

@@ -1,8 +1,6 @@
 package com.example.clinic.model.dataBase.specialization
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.clinic.model.dataBase.patient.Patient
 
 @Dao
 interface SpecializationDao {

@@ -3,22 +3,19 @@ package com.example.clinic.model.dataBase.doctor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class DoctorNetworkService(){
+object DoctorNetworkService {
+    lateinit var retrofit: Retrofit
+    val BASE_URL: String = "https://zeref.ru/clinicquerys/"
 
-    companion object{
-        var mRetrofit: Retrofit = TODO()
-        val BASE_URL: String = "https://zeref.ru/clinicquerys/"
+    private fun NetworkService() {
 
-        private fun NetworkService() {
+        retrofit = Retrofit.Builder()
+            .baseUrl(BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+    }
 
-            mRetrofit = Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build()
-        }
-
-        fun getJSONDoctor(): DoctorApi? {
-            return mRetrofit.create<DoctorApi>(DoctorApi::class.java)
-        }
+    fun doctorApi(): DoctorApi {
+        return retrofit.create<DoctorApi>(DoctorApi::class.java)
     }
 }

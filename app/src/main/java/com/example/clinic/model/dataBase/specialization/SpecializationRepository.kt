@@ -1,11 +1,7 @@
 package com.example.clinic.model.dataBase.specialization
 
 import android.content.Context
-import androidx.lifecycle.LiveData
 import com.example.clinic.model.dataBase.ClinicDataBase
-import kotlinx.coroutines.Deferred
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.async
 
 class SpecializationRepository (context: Context){
     private val clinicDataBase = ClinicDataBase(context)

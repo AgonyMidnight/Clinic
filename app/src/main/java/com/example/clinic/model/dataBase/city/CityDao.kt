@@ -1,10 +1,6 @@
 package com.example.clinic.model.dataBase.city
 
-import androidx.lifecycle.LiveData
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 
 interface CityDao {
     @Insert

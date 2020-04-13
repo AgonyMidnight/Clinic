@@ -1,8 +1,6 @@
 package com.example.clinic.model.dataBase.visit
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.clinic.model.dataBase.patient.Patient
 import java.util.*
 
 @Dao

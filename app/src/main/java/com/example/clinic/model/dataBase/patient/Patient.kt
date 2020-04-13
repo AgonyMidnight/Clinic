@@ -2,11 +2,6 @@ package com.example.clinic.model.dataBase.patient
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.room.TypeConverter
-import androidx.room.TypeConverters
-import java.text.DateFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
 
 @Entity

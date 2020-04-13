@@ -1,9 +1,6 @@
 package com.example.clinic.model.dataBase.patient
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
-import com.example.clinic.model.dataBase.patient.Patient
-import com.example.clinic.model.dataBase.visit.DateConverter
 
 @Dao
 interface PatientDao {
