@@ -9,12 +9,27 @@ class DoctorRepository(context: Context) {
     private val doctorDao = clinicDataBase.doctorDao()
     private var errorFlagDoctorApi: Boolean = false
 
+<<<<<<< HEAD
     suspend fun getDoctorID(doctor_id: Int) {
         try {
             val doctor = DoctorNetworkService.doctorApi().getDoctorInfo(doctor_id)
         } catch (e: Throwable) {
             errorFlagDoctorApi = true
         }
+=======
+    suspend fun getDoctorID1(doctor_id: Int): Doctor = doctorDao.selectIdDoctor(doctor_id)
+
+    suspend fun getDoctorID(doctor_id: Int){
+        DoctorNetworkService.Companion
+            .getJSONDoctor()
+            ?.getDoctorBySpec()
+            ?.enqueue(Callback<Doctor
+                @Override
+                fun onResponse(call: Call<Doctor>,  response: Response<Doctor>) {
+
+                }
+            });
+>>>>>>> 1bd403bee60ab6f8b943fbdd070c5bb4d4dc50b5
     }
 
     suspend fun getDoctorsAll() {
